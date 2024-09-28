@@ -1,84 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>História de Amor Interativa</title>
-    <link rel="stylesheet" href="estilo.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #e74c3c;
+        }
+        .option {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <!-- Introdução -->
-        <div id="passo-0" class="passo ativo">
-            <h1>O Primeiro Encontro</h1>
-            <p>Você encontra um jovem coreano(a) em um café. Ele(a) parece nervoso(a) e adorável. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="1" data-escolha="gentil">Ser gentil e perguntar o nome dele(a)</button>
-            <button class="btn-proximo" data-proximo="2" data-escolha="direto">Perguntar diretamente o motivo do nervosismo</button>
+    <h1>História de Amor Interativa</h1>
+    <p>Você acaba de acordar e precisa decidir o que fará de tarde.</p>
+    <div class="option" onclick="showSection('library')">1. Ir para a biblioteca</div>
+    <div class="option" onclick="showSection('cafe')">2. Ir para um café</div>
+    <div class="option" onclick="showSection('park')">3. Ir para o parque</div>
+
+    <div id="library" class="hidden">
+        <p>Você passa a tarde lendo e nada de novo acontece. Você volta para casa e vai direto pra cama.</p>
+    </div>
+
+    <div id="cafe" class="hidden">
+        <p>No café, uma moça muito atraente chama sua atenção. O que você faz?</p>
+        <div class="option" onclick="showSection('introduce')">1. Se apresenta subitamente</div>
+        <div class="option" onclick="showSection('weather')">2. Comenta sobre o clima</div>
+        <div class="option" onclick="showSection('buyDrink')">3. Paga uma bebida</div>
+
+        <div id="introduce" class="hidden">
+            <p>A moça é educada com você, mas o assunto não flui direito. Ela diz que estava com pressa e vai embora.</p>
         </div>
 
-        <!-- Caminho 1 -->
-        <div id="passo-1" class="passo">
-            <h2>Uma Conversa Gentil</h2>
-            <p>Ele(a) sorri e parece aliviado(a) com sua gentileza. Ele(a) começa a contar sobre seu dia. Como você responde?</p>
-            <button class="btn-proximo" data-proximo="3" data-escolha="ouvir">Ouvir com atenção</button>
-            <button class="btn-proximo" data-proximo="4" data-escolha="interromper">Interromper e fazer uma piada</button>
+        <div id="weather" class="hidden">
+            <p>Ela responde e desabafa um pouco sobre seu dia que estava sendo corrido. Você faz um comentário engraçado e o assunto flui incrivelmente bem. Ela diz que está com pressa, mas que gostou de te conhecer. O que você diz?</p>
+            <div class="option" onclick="showSection('takeCare')">1. Se cuida</div>
+            <div class="option" onclick="showSection('exchangeContacts')">2. Só faltou trocar os contatos</div>
+            <div class="option" onclick="showSection('seeYouAgain')">3. Espero te ver de novo</div>
+
+            <div id="takeCare" class="hidden">
+                <p>Ela vai embora e vocês nunca mais se viram novamente.</p>
+            </div>
+
+            <div id="exchangeContacts" class="hidden">
+                <p>Ela dá uma risadinha e te passa o número de telefone. Você está indo muito bem.</p>
+            </div>
+
+            <div id="seeYouAgain" class="hidden">
+                <p>Ela vai embora e vocês nunca mais se viram novamente.</p>
+            </div>
         </div>
 
-        <div id="passo-2" class="passo">
-            <h2>Conversa Direta</h2>
-            <p>Ele(a) parece surpreso(a) com sua pergunta, mas acaba explicando que está passando por um momento difícil. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="5" data-escolha="confortar">Oferecer palavras de conforto</button>
-            <button class="btn-proximo" data-proximo="6" data-escolha="mudar">Mudar o assunto para algo leve</button>
+        <div id="buyDrink" class="hidden">
+            <p>A moça é simpática com você e aceita. O que você faz?</p>
+            <div class="option" onclick="showSection('introduceAgain')">1. Se apresenta</div>
+            <div class="option" onclick="showSection('sincereCompliment')">2. Elogio sincero</div>
+            <div class="option" onclick="showSection('flirt')">3. Cantada</div>
+
+            <div id="introduceAgain" class="hidden">
+                <p>Ela perde facilmente o interesse e o papo não flui. Ela diz que está com pressa e vai embora.</p>
+            </div>
+
+            <div id="sincereCompliment" class="hidden">
+                <p>Ela recebe muito bem e solta um "Você também não é nada mal, tirando o cabelo claro", com um leve tom de provocação. O que você diz?</p>
+                <div class="option" onclick="showSection('joke')">1. "Se implicar muito seu filho vai ter um igual"</div>
+                <div class="option" onclick="showSection('whatDoYouDo')">2. "Você faz o que da vida? Além de me provocar"</div>
+                <div class="option" onclick="showSection('messy')">3. "Muito desleixado pra você né?"</div>
+
+                <div id="joke" class="hidden">
+                    <p>Depois das provocações, vocês têm um papo tranquilo e trocam os contatos um pouco antes dela ir embora. Ela demonstrou interesse, mas aparentemente não busca algo sério.</p>
+                </div>
+
+                <div id="whatDoYouDo" class="hidden">
+                    <p>Depois das provocações, vocês têm um papo tranquilo e trocam os contatos um pouco antes dela ir embora. Ela demonstrou interesse, mas aparentemente não busca algo sério.</p>
+                </div>
+
+                <div id="messy" class="hidden">
+                    <p>Depois das provocações, vocês têm um papo tranquilo e trocam os contatos um pouco antes dela ir embora. Ela demonstrou interesse, mas aparentemente não busca algo sério.</p>
+                </div>
+            </div>
+
+            <div id="flirt" class="hidden">
+                <p>Ela perde facilmente o interesse e o papo não flui. Ela diz que está com pressa e vai embora.</p>
+            </div>
         </div>
+    </div>
 
-        <!-- Caminho 1.1 -->
-        <div id="passo-3" class="passo">
-            <h2>Atenção Plena</h2>
-            <p>Ele(a) aprecia sua escuta e começa a se abrir mais. Você sente uma conexão. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="7" data-escolha="elogiar">Elogiar algo que ele(a) disse</button>
-            <button class="btn-proximo" data-proximo="8" data-escolha="flerte">Fazer um comentário sutil de flerte</button>
-        </div>
+    <div id="park" class="hidden">
+        <p>Você decide ir para o parque e aproveitar a tarde ao ar livre. O que você faz?</p>
+        <div class="option">1. Caminha e observa as pessoas</div>
+        <div class="option">2. Sentar em um banco e ler um livro</div>
+        <div class="option">3. Tentar se aproximar de alguém</div>
+    </div>
 
-        <!-- Caminho 1.2 -->
-        <div id="passo-4" class="passo">
-            <h2>Uma Piada Inesperada</h2>
-            <p>Ele(a) ri um pouco, mas parece desconcertado(a). Você decide suavizar a situação. Como você faz isso?</p>
-            <button class="btn-proximo" data-proximo="9" data-escolha="desculpar">Pedir desculpas e ser mais sério</button>
-            <button class="btn-proximo" data-proximo="10" data-escolha="rirJunto">Rir junto e continuar leve</button>
-        </div>
-
-        <!-- Outros caminhos levam a diferentes finais -->
-        <div id="passo-5" class="passo">
-            <h2>Palavras de Conforto</h2>
-            <p>Ele(a) parece reconfortado(a) com suas palavras. Vocês conversam por horas. Como você termina a conversa?</p>
-            <button class="btn-proximo" data-proximo="11" data-escolha="aprofundar">Tentar aprofundar a relação</button>
-            <button class="btn-proximo" data-proximo="12" data-escolha="despedir">Despedir-se com um toque de carinho</button>
-        </div>
-
-        <!-- Muitos passos intermediários (passo-6 a passo-29)... -->
-
-        <!-- Finais -->
-        <div id="passo-final-gentil" class="passo">
-            <h2>Final Feliz: Amor à Primeira Vista</h2>
-            <p>Após várias conversas e encontros, vocês acabam se apaixonando perdidamente. Vocês vivem felizes juntos!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
-
-        <div id="passo-final-direto" class="passo">
-            <h2>Final Trágico: Desconexão</h2>
-            <p>Por mais que houvesse potencial, as conversas nunca passaram da superficialidade. Vocês acabam se distanciando.</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
-
-        <!-- Outros finais felizes, trágicos e inesperados (passo-final-1 a passo-final-30)... -->
-
-        <div id="passo-final-surpresa" class="passo">
-            <h2>Final Surpresa: Apenas Amigos</h2>
-            <p>Vocês percebem que, apesar da química inicial, a amizade é o melhor caminho. Vocês se tornam grandes amigos!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.hidden');
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
