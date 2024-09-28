@@ -10,116 +10,115 @@
 
 <main>
     <h1>Amor em Seul</h1>
-    <div id="passo1" class="passo ativo">
+    <div class="passo ativo" id="passo-0">
         <p>Você é um jovem estudante coreano e acorda em um dia comum. Após se arrumar, você tem algumas opções para o início do seu dia:</p>
-        <button class="btn-proximo" onclick="proximoPasso(2)">Ir à biblioteca</button>
-        <button class="btn-proximo" onclick="proximoPasso(3)">Ir ao café</button>
-        <button class="btn-proximo" onclick="proximoPasso(4)">Ir ao parque</button>
+        <button class="btn-proximo" data-proximo="2"(2)>Ir à biblioteca</button>
+        <button class="btn-proximo" data-proximo="3">Ir ao café</button>
+        <button class="btn-proximo" data-proximo="4">Ir ao parque</button>
     </div>
 
-    <div id="passo0" class="passo ativo">
+    <div class="passo" id="passo-1">
         <p>É um novo dia como novas escolhas, o que você decide fazer hoje?:</p>
-        <button class="btn-proximo" onclick="proximoPasso(2)">Ir à biblioteca</button>
-        <button class="btn-proximo" onclick="proximoPasso(3)">Ir ao café</button>
-        <button class="btn-proximo" onclick="proximoPasso(4)">Ir ao parque</button>
+        <button class="btn-proximo" data-proximo="2">Ir à biblioteca</button>
+        <button class="btn-proximo" data-proximo="3">Ir ao café</button>
+        <button class="btn-proximo" data-proximo="4">Ir ao parque</button>
     </div>
 
-    <div id="passo2" class="passo">
+    <div class="passo" id="passo-2">
         <p>Na biblioteca, o dia passa tranquilamente e nada de novo acontece. Talvez seu amor esteja em outro lugar.:</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+        <button class="btn-proximo" data-proximo="1">Tentar Novamente</button>
     </div>
 
-    <div id="passo3" class="passo">
+    <div class="passo" id="passo-3">
         <p>No café, você avista uma jovem atraente sentada próxima à janela. Ela te observa e parece interessada. Você pode:</p>
-        <button class="btn-proximo" onclick="proximoPasso(5)">Sentar-se com ela</button>
-        <button class="btn-proximo" onclick="proximoPasso(6)">Acenar de longe</button>
+        <button class="btn-proximo" data-proximo="5">Sentar-se com ela</button>
+        <button class="btn-proximo" data-proximo="6">Acenar de longe</button>
     </div>
 
-    <div id="passo4" class="passo">
+    <div class="passo" id="passo-4">
         <p>No parque, uma jovem bonita passa correndo na sua frente. Ela parecia apressada e estava indo em direção à um café. Se você estivesse lá talvez pudesse conhece-la.</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+        <button class="btn-proximo" data-proximo="1">Tentar Novamente</button>
     </div>
 
-    <div id="passo5" class="passo">
+    <div class="passo" id="passo-5">
         <p>Você pede para se sentar com ela educadamente e ela te recebe com um sorriso tímido. Como deseja seguir?</p></p>
-        <button class="btn-proximo" onclick="proximoPasso(6)">Fazer elogio sincero</button>
-        <button class="btn-proximo" onclick="proximoPasso(7)">Puxar papo</button>
+        <button class="btn-proximo" data-proximo="6">Fazer elogio sincero</button>
+        <button class="btn-proximo" data-proximo="7">Puxar papo</button>
     </div>
 
-    <div id="passo6" class="passo">
+    <div class="passo" id="passo-6">
         <p>Você elogia o sorriso dela e ela solta um ainda maior. Você começou bem, como deseja seguir?</p>
-        <button class="btn-proximo" onclick="proximoPasso(14)">Puxar papo</button>
+        <button class="btn-proximo" data-proximo="14">Puxar papo</button>
     </div>
 
-    <div id="passo7" class="passo">
+    <div class="passo" id="passo-7">
         <p>Você senta ao lado dela e a conversa flui naturalmente. Chega um momento que o clima está extremamente bom. O que você faz?</p>
-        <button class="btn-proximo" onclick="proximoPasso(9)">Se aproximar</button>
-        <button class="btn-proximo" onclick="proximoPasso(8)">Continuar conversando</button>
-        <button class="btn-proximo" onclick="proximoPasso(13)">Contar piada</button>
+        <button class="btn-proximo" data-proximo="9">Se aproximar</button>
+        <button class="btn-proximo" data-proximo="8">Continuar conversando</button>
+        <button class="btn-proximo" data-proximo="13">Contar piada</button>
     </div>
 
-    <div id="passo8" class="passo">
+    <div class="passo" id="passo-8">
         <p>Vocês conversam mais um pouco e o papo estava bom, mas ela diz que precisa ir. Talvez da próxima vocês tenham mais tempo juntos.</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+        <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
     </div>
 
-    <div id="passo9" class="passo">
+    <div class="passo" id="passo-9">
         <p>Agora que vocês estão mais próximos um do outro, ela toca suavemente seu braço. Vocês conversam mais um pouco e agora há um brilho nos olhos dos dois. Ela precisa ir, o que você faz?</p>
-        <button class="btn-proximo" onclick="proximoPasso(10)">Deixar ela ir</button>
-        <button class="btn-proximo" onclick="proximoPasso(11)">Marcar um novo encontro</button>
-        <button class="btn-proximo" onclick="proximoPasso(12)">Pedir o contato dela</button>
+        <button class="btn-proximo" data-proximo="10">Deixar ela ir</button>
+        <button class="btn-proximo" data-proximo="11">Marcar um novo encontro</button>
+        <button class="btn-proximo" data-proximo="12">Pedir o contato dela</button>
     </div>
 
-    <div id="passo10" class="passo">
+    <div class="passo" id="passo-10">
         <p>Ela vai embora um pouco decepcionada. Parece que queria dizer alguma coisa mas você não parecia interessado em ouvir. Talvez em uma outra oportunidade.</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+        <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
     </div>
 
-    <div id="passo11" class="passo">
+    <div class="passo" id="passo-11">
         <p>No momento em que você começa a falar ela começa também e por coincidência, os dois surgerem se ver denovo. Vocês acham a situação engraçada e isso cria um vínculo diferente entre vocês.</p>
         <p>A história de vocês está só começando e parece muito promissora, parabéns!</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Jogar denovo</button>
+        <button class="btn-proximo" data-proximo="0">Jogar denovo</button>
     </div>
 
-     <div id="passo12" class="passo">
+     <div class="passo" id="passo-12">
         <p>Ela concorda em trocar os contatos. Vocês agora podem marcar um novo encontro em um futuro próximo, mas isso pode demorar. Talvez as coisas fossem melhores se você tivesse marcado um novo encontro.</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+        <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
     </div>
 
-    <div id="passo13" class="passo">
+    <div class="passo" id="passo-13">
         <p>Você faz um comentário descontraído e engraçado, fazendo ela rir. A conversa continua mas talvez ela estivesse esperando algo a mais. Quem sabe da próxima?</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+        <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
     </div>
-</main>
-
-    <div id="passo14" class="passo">
+    
+    <div class="passo" id="passo-14">
         <p>Você senta ao lado dela e a conversa flui naturalmente. Chega um momento que o clima está extremamente bom. O que você faz?</p>
-        <button class="btn-proximo" onclick="proximoPasso(8)">Continuar conversando</button>
-        <button class="btn-proximo" onclick="proximoPasso(9)">Chamar pra perto</button>
-        <button class="btn-proximo" onclick="proximoPasso(15)">Ficar em silêncio</button>
+        <button class="btn-proximo" data-proximo="8">Continuar conversando</button>
+        <button class="btn-proximo" data-proximo="9">Chamar pra perto</button>
+        <button class="btn-proximo" data-proximo="15">Ficar em silêncio</button>
     </div>
 
-    <div id="passo15" class="passo">
+    <div class="passo" id="passo-15">
         <p>O silêncio gera tensão e o coração de vocês dispara. O corpo dela está totalmente alinhado ao seu e vocês começam a se aproximar lentamente. O que fazer?</p>
-        <button class="btn-proximo" onclick="proximoPasso(9)">Comentar algo descontraído</button>
-        <button class="btn-proximo" onclick="proximoPasso(16)">Manter o silêncio</button>
+        <button class="btn-proximo" data-proximo="9">Comentar algo descontraído</button>
+        <button class="btn-proximo" data-proximo="16">Manter o silêncio</button>
     </div>
 
-    <div id="passo16" class="passo">
+    <div class="passo" id="passo-16">
         <p>O silêncio ensurdecedor faz vocês se desejarem cada vez mais. Naturalmente, o lábio de vocês está quase encostando...</p>
-        <button class="btn-proximo" onclick="proximoPasso(18)">Continuar</button>
-        <button class="btn-proximo" onclick="proximoPasso(17)">Se afastar</button>
+        <button class="btn-proximo" data-proximo="18">Continuar</button>
+        <button class="btn-proximo" data-proximo="17">Se afastar</button>
     </div>
 
-    <div id="passo17" class="passo">
+    <div class="passo" id="passo-17">
         <p>Você não está pronto para o amor. A chance de ouro foi pelo ralo e o encontro acabou extremamente mal. Que desperdício!</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar novamente</button>
+        <button class="btn-proximo" data-proximo="0">Tentar novamente</button>
     </div>
 
-    <div id="passo18" class="passo">
+    <div class="passo" id="passo-18">
         <p>Vocês se beijaram e foi um momento inesquecível. A história de amor está só começando, e muito bem por sinal. Você nasceu pra isso.</p>
          <p>Você conquistou o melhor final possível, parabéns!</p>
-        <button class="btn-proximo" onclick="proximoPasso(0)">Jogar denovo</button>
+        <button class="btn-proximo" data-proximo="0">Jogar denovo</button>
     </div>
     
     </main>
