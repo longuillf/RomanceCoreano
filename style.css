@@ -144,3 +144,10 @@ button.btn-proximo[data-proximo="0"]:hover {
     text-align: center; /* Centraliza o texto */
     margin-top: 20px; /* Espaço acima do texto */
 }
+
+#nivelAmor {
+    font-size: 1.2em;
+    color: #ff5e5e;
+    font-weight: bold;
+    margin-top: 10px;
+}
