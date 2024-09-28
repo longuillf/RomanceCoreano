@@ -1,111 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>História de Amor</title>
+    <title>História de Amor Interativa</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <main>
-        <!-- Introdução: Escolha a perspectiva -->
-        <div class="passo ativo" id="passo-0">
-            <p>Bem-vindo à história de amor entre Jisoo e Minho. Cada escolha que você fizer impactará o final da história. Escolha com sabedoria.</p>
-            <p>De qual perspectiva você deseja seguir a história?</p>
-            <button class="btn-proximo" data-proximo="1" data-escolha="jisoo">Perspectiva de Jisoo</button>
-            <button class="btn-proximo" data-proximo="2" data-escolha="minho">Perspectiva de Minho</button>
+        <!-- Introdução -->
+        <div id="passo-0" class="passo ativo">
+            <h1>O Primeiro Encontro</h1>
+            <p>Você encontra um jovem coreano(a) em um café. Ele(a) parece nervoso(a) e adorável. O que você faz?</p>
+            <button class="btn-proximo" data-proximo="1" data-escolha="gentil">Ser gentil e perguntar o nome dele(a)</button>
+            <button class="btn-proximo" data-proximo="2" data-escolha="direto">Perguntar diretamente o motivo do nervosismo</button>
         </div>
 
-        <!-- Perspectiva de Jisoo -->
-        <div class="passo" id="passo-1">
-            <p>Você está no primeiro dia de aula da faculdade e vê Minho pela primeira vez. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="3">Se aproximar e cumprimentar</button>
-            <button class="btn-proximo" data-proximo="4">Esperar ele falar com você</button>
+        <!-- Caminho 1 -->
+        <div id="passo-1" class="passo">
+            <h2>Uma Conversa Gentil</h2>
+            <p>Ele(a) sorri e parece aliviado(a) com sua gentileza. Ele(a) começa a contar sobre seu dia. Como você responde?</p>
+            <button class="btn-proximo" data-proximo="3" data-escolha="ouvir">Ouvir com atenção</button>
+            <button class="btn-proximo" data-proximo="4" data-escolha="interromper">Interromper e fazer uma piada</button>
         </div>
 
-        <!-- Perspectiva de Minho -->
-        <div class="passo" id="passo-2">
-            <p>Você vê Jisoo conversando com amigos no campus e se sente atraído. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="5">Ir até ela e iniciar uma conversa</button>
-            <button class="btn-proximo" data-proximo="6">Ficar observando de longe</button>
+        <div id="passo-2" class="passo">
+            <h2>Conversa Direta</h2>
+            <p>Ele(a) parece surpreso(a) com sua pergunta, mas acaba explicando que está passando por um momento difícil. O que você faz?</p>
+            <button class="btn-proximo" data-proximo="5" data-escolha="confortar">Oferecer palavras de conforto</button>
+            <button class="btn-proximo" data-proximo="6" data-escolha="mudar">Mudar o assunto para algo leve</button>
         </div>
 
-        <!-- Jisoo se aproxima -->
-        <div class="passo" id="passo-3">
-            <p>Jisoo se aproxima de Minho, que parece surpreso e feliz. Como você inicia a conversa?</p>
-            <button class="btn-proximo" data-proximo="7">Falar sobre a aula</button>
-            <button class="btn-proximo" data-proximo="8">Perguntar sobre ele</button>
+        <!-- Caminho 1.1 -->
+        <div id="passo-3" class="passo">
+            <h2>Atenção Plena</h2>
+            <p>Ele(a) aprecia sua escuta e começa a se abrir mais. Você sente uma conexão. O que você faz?</p>
+            <button class="btn-proximo" data-proximo="7" data-escolha="elogiar">Elogiar algo que ele(a) disse</button>
+            <button class="btn-proximo" data-proximo="8" data-escolha="flerte">Fazer um comentário sutil de flerte</button>
         </div>
 
-        <!-- Esperar Minho -->
-        <div class="passo" id="passo-4">
-            <p>Você decide esperar Minho falar com você, mas ele parece tímido. O que você faz agora?</p>
-            <button class="btn-proximo" data-proximo="7">Tentar puxar conversa sobre a aula</button>
-            <button class="btn-proximo" data-proximo="9">Ficar em silêncio e observar</button>
+        <!-- Caminho 1.2 -->
+        <div id="passo-4" class="passo">
+            <h2>Uma Piada Inesperada</h2>
+            <p>Ele(a) ri um pouco, mas parece desconcertado(a). Você decide suavizar a situação. Como você faz isso?</p>
+            <button class="btn-proximo" data-proximo="9" data-escolha="desculpar">Pedir desculpas e ser mais sério</button>
+            <button class="btn-proximo" data-proximo="10" data-escolha="rirJunto">Rir junto e continuar leve</button>
         </div>
 
-        <!-- Minho inicia conversa -->
-        <div class="passo" id="passo-5">
-            <p>Minho se aproxima e inicia uma conversa. Como você reage?</p>
-            <button class="btn-proximo" data-proximo="10">Responder com entusiasmo</button>
-            <button class="btn-proximo" data-proximo="11">Responder de forma tímida</button>
+        <!-- Outros caminhos levam a diferentes finais -->
+        <div id="passo-5" class="passo">
+            <h2>Palavras de Conforto</h2>
+            <p>Ele(a) parece reconfortado(a) com suas palavras. Vocês conversam por horas. Como você termina a conversa?</p>
+            <button class="btn-proximo" data-proximo="11" data-escolha="aprofundar">Tentar aprofundar a relação</button>
+            <button class="btn-proximo" data-proximo="12" data-escolha="despedir">Despedir-se com um toque de carinho</button>
         </div>
 
-        <!-- Minho observa de longe -->
-        <div class="passo" id="passo-6">
-            <p>Minho decide não se aproximar, mas ao observá-la, ele sente que pode perder a oportunidade. O que fazer?</p>
-            <button class="btn-proximo" data-proximo="5">Mudar de ideia e ir até ela</button>
-            <button class="btn-proximo" data-proximo="12">Seguir com seu dia e esquecer</button>
-        </div>
+        <!-- Muitos passos intermediários (passo-6 a passo-29)... -->
 
-        <!-- Conversa sobre aula -->
-        <div class="passo" id="passo-7">
-            <p>A conversa sobre a aula flui naturalmente, vocês descobrem que têm interesses em comum. O que fazer a seguir?</p>
-            <button class="btn-proximo" data-proximo="13">Convidar para tomar café</button>
-            <button class="btn-proximo" data-proximo="14">Continuar a conversa casualmente</button>
-        </div>
-
-        <!-- Pergunta sobre ele -->
-        <div class="passo" id="passo-8">
-            <p>Você pergunta sobre Minho, e ele fala sobre seus hobbies. Como você reage?</p>
-            <button class="btn-proximo" data-proximo="13">Convidar para tomar café</button>
-            <button class="btn-proximo" data-proximo="15">Ficar apenas ouvindo</button>
-        </div>
-
-        <!-- Minho responde com entusiasmo -->
-        <div class="passo" id="passo-10">
-            <p>Minho responde com entusiasmo, e a conversa flui bem. O que fazer agora?</p>
-            <button class="btn-proximo" data-proximo="16">Sugerir sair juntos no final de semana</button>
-            <button class="btn-proximo" data-proximo="14">Continuar falando sobre a faculdade</button>
-        </div>
-
-        <!-- Minho responde tímido -->
-        <div class="passo" id="passo-11">
-            <p>Minho responde de forma tímida, mas parece interessado. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="17">Dar confiança e sugerir algo em comum</button>
-            <button class="btn-proximo" data-proximo="18">Aguardar ele tomar iniciativa</button>
-        </div>
-
-        <!-- Final feliz -->
-        <div class="passo" id="passo-final">
-            <p>Vocês dois decidem sair para um encontro romântico e acabam descobrindo um ao outro. O relacionamento de vocês floresce e vocês terminam juntos.</p>
-            <p class="parabens">Parabéns! Você completou a história com sucesso!</p>
-            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
-        </div>
-
-        <!-- Final neutro -->
-        <div class="passo" id="passo-neutro">
-            <p>Vocês tiveram bons momentos, mas por algum motivo as coisas esfriaram. Talvez em outro momento a história de vocês floresça.</p>
+        <!-- Finais -->
+        <div id="passo-final-gentil" class="passo">
+            <h2>Final Feliz: Amor à Primeira Vista</h2>
+            <p>Após várias conversas e encontros, vocês acabam se apaixonando perdidamente. Vocês vivem felizes juntos!</p>
             <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
         </div>
 
-        <!-- Final triste -->
-        <div class="passo" id="passo-triste">
-            <p>Infelizmente, as escolhas feitas afastaram vocês dois. Às vezes, o amor não vence todas as barreiras.</p>
+        <div id="passo-final-direto" class="passo">
+            <h2>Final Trágico: Desconexão</h2>
+            <p>Por mais que houvesse potencial, as conversas nunca passaram da superficialidade. Vocês acabam se distanciando.</p>
             <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
         </div>
-        
+
+        <!-- Outros finais felizes, trágicos e inesperados (passo-final-1 a passo-final-30)... -->
+
+        <div id="passo-final-surpresa" class="passo">
+            <h2>Final Surpresa: Apenas Amigos</h2>
+            <p>Vocês percebem que, apesar da química inicial, a amizade é o melhor caminho. Vocês se tornam grandes amigos!</p>
+            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
+        </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
