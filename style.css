@@ -1,0 +1,146 @@
+/* Fonte personalizada para aumentar a imersão */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-color: #f5f0f6; /* Fundo claro com tom de rosa suave */
+    color: #3e3e3e;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco transparente */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Passos da história */
+.passo {
+    display: none;
+    background: rgba(255, 240, 245, 0.9); /* Tom de rosa romântico e suave */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.passo.ativo {
+    display: block;
+}
+
+/* Texto principal */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    color: #6d6d6d;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões interativos */
+button {
+    background-color: #e57373; /* Vermelho suave para paixão */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px; /* Arredondado para suavidade */
+    margin: 10px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ef5350; /* Vermelho mais forte ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Imagens de fundo */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Destaque nos títulos */
+h1, h2, h3 {
+    color: #ad1457; /* Tom de rosa intenso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Fundo dinâmico com animação para dar clima de romance */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgba(255, 192, 203, 0.8), rgba(173, 20, 87, 0.8)); /* Degradê romântico */
+    z-index: -1;
+    animation: bgMove 10s ease-in-out infinite;
+}
+
+/* Animação sutil no fundo */
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Efeito especial para o texto imersivo */
+p, button {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão de Tentar Novamente */
+button.btn-proximo[data-proximo="0"] {
+    background-color: #d32f2f;
+}
+
+button.btn-proximo[data-proximo="0"]:hover {
+    background-color: #b71c1c;
+}
+
+.parabens {
+    font-size: 1.5em; /* Ajuste o tamanho da fonte conforme necessário */
+    color: gold; /* Ou outra cor que você preferir */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Espaço acima do texto */
+}
