@@ -1,155 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>História de Amor</title>
+    <title>RomanceCoreano</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <!-- Passo 0: Introdução -->
-        <div class="passo ativo" id="passo-0">
-            <p>Bem-vindo à sua história de amor! Suas escolhas determinarão o destino dos protagonistas.</p>
-            <p>Você acorda em um lindo dia de primavera e decide como passar o dia. O que você fará?</p>
-            <button class="btn-proximo" data-proximo="1">Ir à biblioteca</button>
-            <button class="btn-proximo" data-proximo="2">Visitar um café</button>
-            <button class="btn-proximo" data-proximo="3">Passear no parque</button>
-        </div>
 
-        <!-- Passo 1: Ir à biblioteca -->
-        <div class="passo" id="passo-1">
-            <p>Na biblioteca, você encontra uma jovem chamada Minji. Ela está procurando um livro específico. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="4">Oferecer ajuda a Minji</button>
-            <button class="btn-proximo" data-proximo="5">Ignorar e seguir lendo</button>
-        </div>
+<main>
+    <h1>Amor em Seul</h1>
+    <div id="passo1" class="passo ativo">
+        <p>Você é um jovem estudante coreano e acorda em um dia comum. Após se arrumar, você tem algumas opções para o início do seu dia:</p>
+        <button class="btn-proximo" onclick="proximoPasso(2)">Ir à biblioteca</button>
+        <button class="btn-proximo" onclick="proximoPasso(3)">Ir ao café</button>
+        <button class="btn-proximo" onclick="proximoPasso(4)">Ir ao parque</button>
+    </div>
 
-        <!-- Passo 2: Visitar um café -->
-        <div class="passo" id="passo-2">
-            <p>Você vai ao café e encontra Joon, um amigo de longa data. Ele parece um pouco triste. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="6">Perguntar o que aconteceu</button>
-            <button class="btn-proximo" data-proximo="7">Conversar sobre coisas divertidas</button>
-        </div>
+    <div id="passo0" class="passo ativo">
+        <p>É um novo dia como novas escolhas, o que você decide fazer hoje?:</p>
+        <button class="btn-proximo" onclick="proximoPasso(2)">Ir à biblioteca</button>
+        <button class="btn-proximo" onclick="proximoPasso(3)">Ir ao café</button>
+        <button class="btn-proximo" onclick="proximoPasso(4)">Ir ao parque</button>
+    </div>
 
-        <!-- Passo 3: Passear no parque -->
-        <div class="passo" id="passo-3">
-            <p>No parque, você vê um festival de flores e uma jovem chamada Soo. Ela parece interessada. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="8">Convidar Soo para ver as flores</button>
-            <button class="btn-proximo" data-proximo="9">Continuar passeando sozinho</button>
-        </div>
+    <div id="passo2" class="passo">
+        <p>Na biblioteca, o dia passa tranquilamente e nada de novo acontece. Talvez seu amor esteja em outro lugar.:</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+    </div>
 
-        <!-- Passo 4: Ajudar Minji -->
-        <div class="passo" id="passo-4">
-            <p>Minji fica feliz com sua ajuda e vocês começam a conversar. Ela te convida para um café. O que você responde?</p>
-            <button class="btn-proximo" data-proximo="10">Aceitar o convite</button>
-            <button class="btn-proximo" data-proximo="11">Recusar e ir embora</button>
-        </div>
+    <div id="passo3" class="passo">
+        <p>No café, você avista uma jovem atraente sentada próxima à janela. Ela te observa e parece interessada. Você pode:</p>
+        <button class="btn-proximo" onclick="proximoPasso(5)">Sentar-se com ela</button>
+        <button class="btn-proximo" onclick="proximoPasso(6)">Acenar de longe</button>
+    </div>
 
-        <!-- Passo 5: Ignorar Minji -->
-        <div class="passo" id="passo-5">
-            <p>Você ignora Minji e continua lendo. O dia passa e você vai para casa sozinho.</p>
-            <p class="parabens">Você perdeu a chance de encontrar o amor. Tente novamente!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
+    <div id="passo4" class="passo">
+        <p>No parque, uma jovem bonita passa correndo na sua frente. Ela parecia apressada e estava indo em direção à um café. Se você estivesse lá talvez pudesse conhece-la.</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+    </div>
 
-        <!-- Passo 6: Perguntar a Joon -->
-        <div class="passo" id="passo-6">
-            <p>Joon compartilha suas preocupações. Você sugere que ele participe de um evento de música no próximo fim de semana. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="12">Oferecer-se para ir junto</button>
-            <button class="btn-proximo" data-proximo="13">Dizer que ele deve ir sozinho</button>
-        </div>
+    <div id="passo5" class="passo">
+        <p>Você pede para se sentar com ela educadamente e ela te recebe com um sorriso tímido. Como deseja seguir?</p></p>
+        <button class="btn-proximo" onclick="proximoPasso(6)">Fazer elogio sincero</button>
+        <button class="btn-proximo" onclick="proximoPasso(7)">Puxar papo</button>
+    </div>
 
-        <!-- Passo 7: Conversar sobre coisas divertidas -->
-        <div class="passo" id="passo-7">
-            <p>Vocês falam sobre suas memórias de infância e Joon parece mais feliz. No entanto, ele precisa ir embora.</p>
-            <p class="parabens">Você fez Joon sorrir, mas a conexão romântica não se desenvolveu. Tente novamente!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
+    <div id="passo6" class="passo">
+        <p>Você elogia o sorriso dela e ela solta um ainda maior. Você começou bem, como deseja seguir?</p>
+        <button class="btn-proximo" onclick="proximoPasso(14)">Puxar papo</button>
+    </div>
 
-        <!-- Passo 8: Convidar Soo -->
-        <div class="passo" id="passo-8">
-            <p>Soo aceita seu convite e vocês se divertem juntos. Você sente uma conexão. O que você faz?</p>
-            <button class="btn-proximo" data-proximo="14">Convidá-la para um jantar</button>
-            <button class="btn-proximo" data-proximo="15">Pedir o número dela</button>
-        </div>
+    <div id="passo7" class="passo">
+        <p>Você senta ao lado dela e a conversa flui naturalmente. Chega um momento que o clima está extremamente bom. O que você faz?</p>
+        <button class="btn-proximo" onclick="proximoPasso(9)">Se aproximar</button>
+        <button class="btn-proximo" onclick="proximoPasso(8)">Continuar conversando</button>
+        <button class="btn-proximo" onclick="proximoPasso(13)">Contar piada</button>
+    </div>
 
-        <!-- Passo 9: Continuar passeando sozinho -->
-        <div class="passo" id="passo-9">
-            <p>Você continua passeando e acaba voltando para casa. O dia termina sem romance.</p>
-            <p class="parabens">Você perdeu a chance de encontrar o amor. Tente novamente!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
+    <div id="passo8" class="passo">
+        <p>Vocês conversam mais um pouco e o papo estava bom, mas ela diz que precisa ir. Talvez da próxima vocês tenham mais tempo juntos.</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+    </div>
 
-        <!-- Passo 10: Aceitar o convite -->
-        <div class="passo" id="passo-10">
-            <p>Vocês vão ao café e se conectam instantaneamente. Minji sugere que vocês se encontrem novamente. O que você responde?</p>
-            <button class="btn-proximo" data-proximo="16">Sim, com certeza!</button>
-            <button class="btn-proximo" data-proximo="17">Agradecer, mas recusar</button>
-        </div>
+    <div id="passo9" class="passo">
+        <p>Agora que vocês estão mais próximos um do outro, ela toca suavemente seu braço. Vocês conversam mais um pouco e agora há um brilho nos olhos dos dois. Ela precisa ir, o que você faz?</p>
+        <button class="btn-proximo" onclick="proximoPasso(10)">Deixar ela ir</button>
+        <button class="btn-proximo" onclick="proximoPasso(11)">Marcar um novo encontro</button>
+        <button class="btn-proximo" onclick="proximoPasso(12)">Pedir o contato dela</button>
+    </div>
 
-        <!-- Passo 11: Recusar o convite -->
-        <div class="passo" id="passo-11">
-            <p>Você recusa o convite e Minji parece desapontada. O dia termina sem romance.</p>
-            <p class="parabens">Você perdeu a chance de encontrar o amor. Tente novamente!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
+    <div id="passo10" class="passo">
+        <p>Ela vai embora um pouco decepcionada. Parece que queria dizer alguma coisa mas você não parecia interessado em ouvir. Talvez em uma outra oportunidade.</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+    </div>
 
-        <!-- Passo 12: Ir com Joon -->
-        <div class="passo" id="passo-12">
-            <p>Você vai com Joon e se divertem muito. Vocês percebem que ainda têm sentimentos um pelo outro. O que fazer?</p>
-            <button class="btn-proximo" data-proximo="18">Declarar seus sentimentos</button>
-            <button class="btn-proximo" data-proximo="19">Continuar como amigos</button>
-        </div>
+    <div id="passo11" class="passo">
+        <p>No momento em que você começa a falar ela começa também e por coincidência, os dois surgerem se ver denovo. Vocês acham a situação engraçada e isso cria um vínculo diferente entre vocês.</p>
+        <p>A história de vocês está só começando e parece muito promissora, parabéns!</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Jogar denovo</button>
+    </div>
 
-        <!-- Passo 13: Deixar Joon ir sozinho -->
-        <div class="passo" id="passo-13">
-            <p>Joon decide ir sozinho e você se sente mal por não ter ido. O dia termina sem romance.</p>
-            <p class="parabens">Você perdeu a chance de encontrar o amor. Tente novamente!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
+     <div id="passo12" class="passo">
+        <p>Ela concorda em trocar os contatos. Vocês agora podem marcar um novo encontro em um futuro próximo, mas isso pode demorar. Talvez as coisas fossem melhores se você tivesse marcado um novo encontro.</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+    </div>
 
-        <!-- Passo 14: Convidar para jantar -->
-        <div class="passo" id="passo-14">
-            <p>Vocês têm um jantar maravilhoso e se apaixonam. Minji se torna a pessoa mais especial da sua vida.</p>
-            <p class="parabens">Parabéns! Você encontrou o amor!</p>
-            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
-        </div>
+    <div id="passo13" class="passo">
+        <p>Você faz um comentário descontraído e engraçado, fazendo ela rir. A conversa continua mas talvez ela estivesse esperando algo a mais. Quem sabe da próxima?</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar Novamente</button>
+    </div>
+</main>
 
-        <!-- Passo 15: Pedir o número de Soo -->
-        <div class="passo" id="passo-15">
-            <p>Você pede o número dela e ela dá. Vocês trocam mensagens e se tornam cada vez mais próximos.</p>
-            <p class="parabens">Parabéns! Você encontrou o amor!</p>
-            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
-        </div>
+    <div id="passo14" class="passo">
+        <p>Você senta ao lado dela e a conversa flui naturalmente. Chega um momento que o clima está extremamente bom. O que você faz?</p>
+        <button class="btn-proximo" onclick="proximoPasso(8)">Continuar conversando</button>
+        <button class="btn-proximo" onclick="proximoPasso(9)">Chamar pra perto</button>
+        <button class="btn-proximo" onclick="proximoPasso(15)">Ficar em silêncio</button>
+    </div>
 
-        <!-- Passo 16: Sim, com certeza! -->
-        <div class="passo" id="passo-16">
-            <p>Vocês se encontram várias vezes e se apaixonam. A conexão entre vocês é inegável.</p>
-            <p class="parabens">Parabéns! Você encontrou o amor!</p>
-            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
-        </div>
+    <div id="passo15" class="passo">
+        <p>O silêncio gera tensão e o coração de vocês dispara. O corpo dela está totalmente alinhado ao seu e vocês começam a se aproximar lentamente. O que fazer?</p>
+        <button class="btn-proximo" onclick="proximoPasso(9)">Comentar algo descontraído</button>
+        <button class="btn-proximo" onclick="proximoPasso(16)">Manter o silêncio</button>
+    </div>
 
-        <!-- Passo 17: Agradecer, mas recusar -->
-        <div class="passo" id="passo-17">
-            <p>Minji se sente triste, e você se pergunta se tomou a decisão certa. O dia termina sem romance.</p>
-            <p class="parabens">Você perdeu a chance de encontrar o amor. Tente novamente!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
+    <div id="passo16" class="passo">
+        <p>O silêncio ensurdecedor faz vocês se desejarem cada vez mais. Naturalmente, o lábio de vocês está quase encostando...</p>
+        <button class="btn-proximo" onclick="proximoPasso(18)">Continuar</button>
+        <button class="btn-proximo" onclick="proximoPasso(17)">Se afastar</button>
+    </div>
 
-        <!-- Passo 18: Declarar seus sentimentos -->
-        <div class="passo" id="passo-18">
-            <p>Você declara seus sentimentos e Joon fica feliz. Vocês começam um lindo relacionamento.</p>
-            <p class="parabens">Parabéns! Você encontrou o amor!</p>
-            <button class="btn-proximo" data-proximo="0">Jogar Novamente</button>
-        </div>
+    <div id="passo17" class="passo">
+        <p>Você não está pronto para o amor. A chance de ouro foi pelo ralo e o encontro acabou extremamente mal. Que desperdício!</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Tentar novamente</button>
+    </div>
 
-        <!-- Passo 19: Continuar como amigos -->
-        <div class="passo" id="passo-19">
-            <p>Vocês decidem continuar como amigos, mas sempre há uma conexão especial. O dia termina sem romance.</p>
-            <p class="parabens">Você perdeu a chance de encontrar o amor. Tente novamente!</p>
-            <button class="btn-proximo" data-proximo="0">Tentar Novamente</button>
-        </div>
+    <div id="passo18" class="passo">
+        <p>Vocês se beijaram e foi um momento inesquecível. A história de amor está só começando, e muito bem por sinal. Você nasceu pra isso.</p>
+         <p>Você conquistou o melhor final possível, parabéns!</p>
+        <button class="btn-proximo" onclick="proximoPasso(0)">Jogar denovo</button>
+    </div>
+    
     </main>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
